@@ -51,9 +51,18 @@
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
-    <hudson.tasks.Shell>
-      <command>cat README.md
+    <org.jenkinsci.plugins.conditionalbuildstep.singlestep.SingleConditionalBuilder plugin="conditional-buildstep@1.3.5">
+      <condition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>${ENV,var=&quot;ToBuild&quot;}</token>
+      </condition>
+      <buildStep class="hudson.tasks.Shell">
+        <command>cat README.md
 echo pass</command>
+      </buildStep>
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+    </org.jenkinsci.plugins.conditionalbuildstep.singlestep.SingleConditionalBuilder>
+    <hudson.tasks.Shell>
+      <command>echo did not cat</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
