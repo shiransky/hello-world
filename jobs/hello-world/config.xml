@@ -55,7 +55,7 @@
       <command>cat README.md
 echo pass
 pwd
-</command>
+zip readme.zip README.md </command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
@@ -92,7 +92,7 @@ pwd
         <credentialsId></credentialsId>
         <overridingCredentials>false</overridingCredentials>
       </resolverCredentialsConfig>
-      <deployPattern>README.md</deployPattern>
+      <deployPattern>readme.zip</deployPattern>
       <resolvePattern></resolvePattern>
       <matrixParams></matrixParams>
       <deployBuildInfo>true</deployBuildInfo>
