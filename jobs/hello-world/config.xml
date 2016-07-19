@@ -92,7 +92,7 @@ zip readme.zip README.md </command>
         <credentialsId></credentialsId>
         <overridingCredentials>false</overridingCredentials>
       </resolverCredentialsConfig>
-      <deployPattern>readme.zip</deployPattern>
+      <deployPattern>readme.zip =&gt; </deployPattern>
       <resolvePattern></resolvePattern>
       <matrixParams></matrixParams>
       <deployBuildInfo>false</deployBuildInfo>
