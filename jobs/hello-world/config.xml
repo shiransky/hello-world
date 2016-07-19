@@ -95,7 +95,7 @@ zip readme.zip README.md </command>
       <deployPattern>readme.zip =&gt; </deployPattern>
       <resolvePattern></resolvePattern>
       <matrixParams></matrixParams>
-      <deployBuildInfo>false</deployBuildInfo>
+      <deployBuildInfo>true</deployBuildInfo>
       <includeEnvVars>false</includeEnvVars>
       <envVarsPatterns>
         <includePatterns></includePatterns>
